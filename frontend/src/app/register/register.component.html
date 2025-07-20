@@ -1,0 +1,76 @@
+
+<!-- Título del formulario de registro -->
+<h2 class="register-title">Registrarse</h2>
+
+<!-- Formulario de registro -->
+<form (ngSubmit)="registrar()" #registerForm="ngForm" class="register-form">
+  
+  <!-- Campo: Nombre -->
+  <div class="form-group">
+    <label for="nombre" class="form-label">Nombre</label>
+    <input
+      type="text"
+      id="nombre"
+      [(ngModel)]="nombre"  
+      name="nombre"                      
+      required                       
+      class="form-control"           
+    />
+  </div>
+
+  <!-- Campo: Correo electrónico -->
+  <div class="form-group">
+    <label for="correo" class="form-label">Correo</label>
+    <input
+      type="email"
+      id="correo"
+      [(ngModel)]="correo"
+      name="correo"
+      required
+      class="form-control"
+    />
+  </div>
+
+  <!-- Campo: Contraseña -->
+  <div class="form-group">
+    <label for="contrasena" class="form-label">Contraseña</label>
+    <input
+      type="password"
+      id="contrasena"
+      [(ngModel)]="contrasena"
+      name="contrasena"
+      required
+      class="form-control"
+    />
+  </div>
+
+  <!-- Campo: Rol del usuario (select) -->
+  <div class="form-group">
+    <label for="rol" class="form-label">Rol</label>
+    <select
+      id="rol"
+      [(ngModel)]="rol"
+      name="rol"
+      required
+      class="form-control"
+    >
+      <!-- Opciones disponibles -->
+      <option value="cliente">Cliente</option>
+      <option value="admin">Administrador</option>
+    </select>
+  </div>
+
+  <!-- Mensaje de éxito -->
+<div *ngIf="success" class="success-message" style="color: green; font-weight: bold; margin-bottom: 1rem;">
+  {{ success }}
+</div>
+
+  <!-- Mensaje de error en caso de validación o fallo de API -->
+  <div *ngIf="error" class="error">{{ error }}</div>
+
+  <!-- Botón de envío: deshabilitado si el formulario no es válido -->
+  <button type="submit" [disabled]="registerForm.invalid" class="btn btn-submit">
+    Registrar
+  </button>
+</form>
+

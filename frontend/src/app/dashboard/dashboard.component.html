@@ -1,0 +1,29 @@
+<!-- Contenedor general para aplicar estilos y organizar el contenido -->
+<div class="container"> 
+
+  <!-- Mensaje de bienvenida con el nombre del usuario cargado desde el componente -->
+  <h2>Bienvenido(a), {{ nombre }} 👋</h2>
+
+  <!-- Si el rol del usuario es 'admin', muestra los botones de administración -->
+  <div *ngIf="rol === 'admin'" class="action-buttons">
+    <!-- Botón que redirige a la vista de administración de productos -->
+    <button routerLink="/productos-admin">🛒 Administrar Productos</button>
+    
+    <!-- Botón que redirige a la vista de administración de usuarios -->
+    <button routerLink="/usuarios">👥 Administrar Usuarios</button>
+  </div>
+
+  <!-- Si el rol del usuario es 'cliente', muestra los botones correspondientes al cliente -->
+  <div *ngIf="rol === 'cliente'" class="action-buttons">
+    <!-- Botón que redirige a la vista de productos para el cliente -->
+    <button routerLink="/productos-cliente">🛍️ Ver Productos</button>
+
+    <!-- Botón que redirige al perfil del usuario -->
+    <button routerLink="/perfil">👤 Mi Perfil</button>
+  </div>
+
+  <!-- Botón para cerrar sesión, llama al método logout() en el componente -->
+  <button class="logout" (click)="logout()">🚪 Cerrar sesión</button>
+
+</div>
+

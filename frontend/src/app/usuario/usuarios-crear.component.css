@@ -1,0 +1,91 @@
+/* Fondo general con un degradado suave */
+body, .register-form {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #f8fbff, #e4f0ff);
+  color: #333;
+}
+
+/* Título principal */
+.register-title {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+/* Estilo del formulario */
+.register-form {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 30px 40px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de grupo de campos */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Etiquetas */
+.form-label,
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Campos de entrada */
+.form-control {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+/* Botón principal */
+.btn-submit {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #0056b3;
+}
+
+/* Mensajes */
+.error {
+  color: #d9534f;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.success {
+  color: #28a745;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+
+

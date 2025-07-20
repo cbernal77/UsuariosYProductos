@@ -1,0 +1,246 @@
+
+/*
+h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+}
+
+.perfil-form {
+  max-width: 400px;
+  margin: 0 auto;
+  background: #f9fafd;
+  padding: 2rem 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  color: #34495e;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  border: 1.8px solid #bdc3c7;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #2980b9;
+  outline: none;
+  box-shadow: 0 0 6px #2980b9aa;
+}
+
+.text-danger {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+}
+
+.alert {
+  max-width: 400px;
+  margin: 0.5rem auto 1rem auto;
+  padding: 0.85rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.alert-danger {
+  background-color: #fcebea;
+  color: #cc1f1a;
+  border: 1px solid #f5c6cb;
+}
+
+.alert-success {
+  background-color: #e6ffed;
+  color: #2d7a2d;
+  border: 1px solid #a2d5a2;
+}
+
+.btn-primary {
+  width: 100%;
+  background-color: #2980b9;
+  border: none;
+  color: white;
+  font-weight: 700;
+  padding: 0.7rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #1f6391;
+}
+
+.btn-primary:disabled {
+  background-color: #7f8c8d;
+  cursor: not-allowed;
+}
+
+@media (max-width: 450px) {
+  .perfil-form {
+    padding: 1.5rem 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+*/
+
+/* Estilos para el título <h2> */
+h2 {
+  text-align: center; /* Centra el texto */
+  margin-bottom: 1.5rem; /* Espacio inferior */
+  color: #2c3e50; /* Color del texto */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipografía */
+  font-weight: 700; /* Negrita */
+}
+
+/* Estilos para el formulario */
+.perfil-form {
+  max-width: 400px; /* Ancho máximo del formulario */
+  margin: 0 auto; /* Centrado horizontal */
+  background: #f9fafd; /* Fondo claro */
+  padding: 2rem 2.5rem; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipografía */
+}
+
+/* Separación entre grupos de campos */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+/* Estilos para etiquetas de campos */
+label {
+  display: block; /* Hace que el label ocupe toda la línea */
+  font-weight: 600; /* Negrita */
+  color: #34495e; /* Color oscuro */
+  margin-bottom: 0.5rem; /* Espacio debajo */
+  font-size: 1rem; /* Tamaño de fuente */
+}
+
+/* Estilos para los inputs y selects */
+.form-control {
+  width: 100%; /* Ocupa todo el ancho */
+  padding: 0.55rem 0.75rem; /* Espaciado interno */
+  border: 1.8px solid #bdc3c7; /* Borde gris claro */
+  border-radius: 6px; /* Bordes redondeados */
+  font-size: 1rem; /* Tamaño de fuente */
+  transition: border-color 0.3s ease; /* Transición suave para cambio de borde */
+}
+
+/* Efecto focus para inputs y selects */
+.form-control:focus {
+  border-color: #2980b9; /* Color azul al enfocar */
+  outline: none; /* Sin outline por defecto */
+  box-shadow: 0 0 6px #2980b9aa; /* Sombra azul suave */
+}
+
+/* Estilos para mensajes de error debajo de campos */
+.text-danger {
+  color: #e74c3c; /* Rojo */
+  font-size: 0.85rem; /* Tamaño más pequeño */
+  margin-top: 0.3rem; /* Espacio superior */
+}
+
+/* Estilos para mensajes de alerta */
+.alert {
+  max-width: 400px; /* Ancho máximo */
+  margin: 0.5rem auto 1rem auto; /* Centrados con margen arriba y abajo */
+  padding: 0.85rem 1rem; /* Espaciado interno */
+  border-radius: 6px; /* Bordes redondeados */
+  font-weight: 600; /* Negrita */
+  text-align: center; /* Texto centrado */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipografía */
+}
+
+/* Estilo para alertas de error */
+.alert-danger {
+  background-color: #fcebea; /* Fondo rojo claro */
+  color: #cc1f1a; /* Texto rojo */
+  border: 1px solid #f5c6cb; /* Borde rojo claro */
+}
+
+/* Estilo para alertas de éxito */
+.alert-success {
+  background-color: #e6ffed; /* Fondo verde claro */
+  color: #2d7a2d; /* Texto verde oscuro */
+  border: 1px solid #a2d5a2; /* Borde verde claro */
+}
+
+/* Estilos para el botón principal */
+.btn-primary {
+  width: 100%; /* Botón ocupa todo el ancho */
+  background-color: #2980b9; /* Fondo azul */
+  border: none; /* Sin borde */
+  color: white; /* Texto blanco */
+  font-weight: 700; /* Negrita */
+  padding: 0.7rem; /* Espaciado interno */
+  font-size: 1.1rem; /* Tamaño de fuente */
+  border-radius: 8px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor tipo pointer */
+  transition: background-color 0.25s ease; /* Transición suave */
+}
+
+/* Efecto hover para botón cuando está habilitado */
+.btn-primary:hover:not(:disabled) {
+  background-color: #1f6391; /* Azul más oscuro */
+}
+
+/* Estilos para botón cuando está deshabilitado */
+.btn-primary:disabled {
+  background-color: #7f8c8d; /* Gris */
+  cursor: not-allowed; /* Cursor prohibido */
+}
+
+.volver-btn {
+  display: block;
+  margin: 0 auto 20px auto; /* centra y da espacio abajo */
+  background-color: #6c757d; /* gris elegante */
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  width: fit-content;
+}
+
+.volver-btn:hover {
+  background-color: #5a6268;
+}
+
+
+/* Media query para dispositivos pequeños */
+@media (max-width: 450px) {
+  .perfil-form {
+    padding: 1.5rem 1.8rem; /* Reduce el padding */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Reduce tamaño del título */
+  }
+}
+

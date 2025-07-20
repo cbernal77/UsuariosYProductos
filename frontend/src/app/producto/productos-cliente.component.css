@@ -1,0 +1,101 @@
+
+.cliente-bg {
+  min-height: 100vh; /* Asegura que el fondo cubra toda la altura de la pantalla */
+  padding: 2rem 1rem; /* Espaciado interior para el contenido */
+  background: linear-gradient(135deg, #7aaaff 0%, #4a7bd9 100%); /* Fondo degradado azul */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente limpia y legible */
+  color: #2c3e50; /* Color de texto predeterminado */
+  min-height: 100vh;
+}
+
+.titulo {
+  text-align: center; /* Centra el texto */
+  margin-bottom: 30px; /* Espacio inferior */
+  font-size: 2rem; /* Tamaño grande del título */
+  font-weight: 700; /* Negrita */
+  color: #1e3a8a; /* Azul oscuro */
+}
+
+.mensaje-error {
+  color: #e74c3c; /* Rojo para indicar error */
+  text-align: center; /* Centrado */
+  margin-bottom: 20px; /* Espacio inferior */
+  font-weight: bold; /* Negrita */
+  font-size: 1rem; /* Tamaño de fuente estándar */
+}
+
+.grid-productos {
+  display: grid; /* Usa grid layout */
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); /* Columnas automáticas adaptables */
+  gap: 25px; /* Espaciado entre tarjetas */
+  max-width: 1200px; /* Máximo ancho del grid */
+  margin: 0 auto; /* Centrado horizontal */
+}
+
+.card-producto {
+  background-color: #b3c9ff;  /* Fondo celeste claro */
+  border-radius: 12px; /* Bordes redondeados */
+  padding: 20px; /* Espaciado interno */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.2s ease, box-shadow 0.3s ease; /* Efectos de transición */
+  display: flex; /* Flex para organizar contenido */
+  flex-direction: column; /* Dirección vertical */
+  justify-content: space-between; /* Espaciado vertical entre elementos */
+}
+
+.card-producto:hover {
+  transform: translateY(-5px); /* Eleva la tarjeta al pasar el mouse */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); /* Aumenta la sombra */
+}
+
+.nombre {
+  font-size: 1.3rem; /* Tamaño grande */
+  font-weight: bold; /* Negrita */
+  margin-bottom: 10px; /* Espaciado inferior */
+  color: #0c2f66; /* Azul oscuro fuerte */
+}
+
+.descripcion {
+  font-size: 0.95rem; /* Ligero más pequeño que el texto normal */
+  color: #2c3e50; /* Gris oscuro */
+  margin-bottom: 15px; /* Espacio inferior */
+  line-height: 1.4; /* Altura de línea */
+  min-height: 50px; /* Asegura altura mínima para alineación */
+}
+
+.detalles {
+  display: flex; /* Flex para alinear precio y stock horizontalmente */
+  justify-content: space-between; /* Separa a los extremos */
+  align-items: center; /* Centra verticalmente */
+  font-weight: 600; /* Semi-negrita */
+  font-size: 0.95rem; /* Tamaño cómodo */
+}
+
+.precio {
+  color: #1a4cd8; /* Azul vibrante para el precio */
+  font-size: 1.1rem; /* Ligeramente más grande para destacar */
+}
+
+.stock {
+  color: #219653; /* Verde para indicar disponibilidad */
+  font-size: 0.95rem; /* Tamaño estándar */
+}
+
+.volver-btn {
+  display: block;
+  margin: 0 auto 20px auto;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  width: fit-content;
+}
+
+.volver-btn:hover {
+  background-color: #5a6268;
+}
+

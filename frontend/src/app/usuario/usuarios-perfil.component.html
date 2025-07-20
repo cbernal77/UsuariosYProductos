@@ -1,0 +1,67 @@
+
+<!-- Título de la sección de perfil -->
+<h2>Mi Perfil</h2>
+<button (click)="accionTerminada()" class="volver-btn">Volver al dashboard</button>
+
+<!-- Mostrar mensaje de error si existe -->
+<div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+
+<!-- Mostrar mensaje de éxito si existe -->
+<div *ngIf="success" class="alert alert-success">{{ success }}</div>
+
+<!-- Formulario para actualizar perfil, llama actualizarPerfil() al enviar -->
+<form (ngSubmit)="actualizarPerfil()" #form="ngForm" class="perfil-form" novalidate>
+
+  <!-- Campo Nombre -->
+  <div class="form-group">
+    <label>Nombre:</label>
+    <input
+      [(ngModel)]="usuario.nombre"  
+      name="nombre"                 
+      required                     
+      #nombre="ngModel"            
+      class="form-control"         
+    />
+    <!-- Mostrar mensaje si el campo es inválido y el usuario ya tocó el campo -->
+    <div *ngIf="nombre.invalid && nombre.touched" class="text-danger">
+      El nombre es obligatorio.
+    </div>
+  </div>
+
+  <!-- Campo Correo -->
+  <div class="form-group">
+    <label>Correo:</label>
+    <input
+      [(ngModel)]="usuario.correo" 
+      name="correo"                
+      type="email"                 
+      required                    
+      #correo="ngModel"           
+      class="form-control"        
+    />
+    <!-- Mostrar mensaje si correo inválido y ya tocado -->
+    <div *ngIf="correo.invalid && correo.touched" class="text-danger">
+      El correo es obligatorio y debe ser válido.
+    </div>
+  </div>
+
+  <!-- Campo Contraseña (opcional) -->
+  <div class="form-group">
+    <label>Contraseña (opcional):</label>
+    <input
+      [(ngModel)]="usuario.contrasena"  
+      name="contrasena"                
+      type="password"                 
+      class="form-control"            
+    />
+  </div>
+
+  <!-- Botón para enviar formulario, deshabilitado si formulario inválido -->
+  <button
+    type="submit"
+    class="btn btn-primary"
+    [disabled]="form.invalid"
+  >
+    Actualizar Perfil
+  </button>
+</form>

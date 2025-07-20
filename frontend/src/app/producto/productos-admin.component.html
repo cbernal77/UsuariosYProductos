@@ -1,0 +1,93 @@
+
+<div class="page-container">
+  <!-- Contenedor principal de toda la página -->
+
+  <h2 class="titulo">Admin: Productos</h2> <!-- Título principal -->
+<!-- Botón para volver al dashboard -->
+<button (click)="accionTerminada()"class="btn btn-primary volver-btn">
+  Volver al Dashboard
+</button>
+  <!-- Mensaje de éxito o error que aparece cuando la variable mensaje tiene contenido -->
+  <div *ngIf="mensaje" class="mensaje">{{ mensaje }}</div>
+
+  <!-- Formulario para crear o editar productos -->
+  <form (ngSubmit)="guardarProducto()" class="formulario-producto">
+    
+    <!-- Campo para el nombre del producto -->
+    <div class="campo-form">
+      <label for="nombre">Nombre:</label>
+      <!-- Input ligado a nuevoProducto.nombre con ngModel, obligatorio -->
+      <input id="nombre" type="text" [(ngModel)]="nuevoProducto.nombre" name="nombre" required />
+    </div>
+
+    <!-- Campo para la descripción del producto -->
+    <div class="campo-form">
+      <label for="descripcion">Descripción:</label>
+      <!-- Textarea ligado a nuevoProducto.descripcion con ngModel, obligatorio -->
+      <textarea id="descripcion" [(ngModel)]="nuevoProducto.descripcion" name="descripcion" rows="3" required></textarea>
+    </div>
+
+    <!-- Campo para el precio del producto -->
+    <div class="campo-form">
+      <label for="precio">Precio:</label>
+      <!-- Input numérico ligado a nuevoProducto.precio con ngModel, valor mínimo 0 -->
+      <input id="precio" type="number" [(ngModel)]="nuevoProducto.precio" name="precio" min="0" step="0.01" required />
+    </div>
+
+    <!-- Campo para el stock del producto -->
+    <div class="campo-form">
+      <label for="stock">Stock:</label>
+      <!-- Input numérico ligado a nuevoProducto.stock con ngModel, valor mínimo 0 -->
+      <input id="stock" type="number" [(ngModel)]="nuevoProducto.stock" name="stock" min="0" required />
+    </div>
+
+    <!-- Botones para enviar o cancelar el formulario -->
+    <div class="botones-form">
+      <!-- Botón para crear o actualizar producto, el texto cambia según si está editando -->
+      <button type="submit" class="btn-guardar">{{ editando ? 'Actualizar' : 'Crear' }}</button>
+
+      <!-- Botón para cancelar la edición, solo visible si estamos editando -->
+      <button type="button" class="btn-cancelar" (click)="cancelarEdicion()" *ngIf="editando">Cancelar</button>
+    </div>
+  </form>
+
+  <hr />
+
+  <!-- Lista de productos obtenidos -->
+  <div class="lista-productos">
+    <!-- Recorremos cada producto con ngFor -->
+    <div *ngFor="let producto of productos" class="card-producto-admin">
+      
+      <!-- Información del producto -->
+      <div class="info-producto">
+        <h3>{{ producto.nombre }}</h3>
+        <p>{{ producto.descripcion }}</p>
+        <div>
+          <strong>Precio:</strong> ${{ producto.precio }} &nbsp;|&nbsp;
+          <strong>Stock:</strong> {{ producto.stock }}
+        </div>
+      </div>
+
+      <!-- Botones para editar o eliminar producto -->
+      <div class="acciones">
+        <button (click)="editarProducto(producto)" class="btn-editar">✏️ Editar</button>
+        <button (click)="mostrarModalEliminar(producto._id)" class="btn-eliminar">🗑️ Eliminar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de confirmación para eliminar un producto -->
+  <div class="modal-backdrop" *ngIf="mostrarModal">
+    <div class="modal">
+      <h3>Confirmar Eliminación</h3>
+      <p>¿Estás seguro de que deseas eliminar este producto?</p>
+      <div class="modal-buttons">
+        <!-- Botón para confirmar eliminación -->
+        <button class="btn btn-danger" (click)="confirmarEliminar()">Sí, eliminar</button>
+        <!-- Botón para cancelar y cerrar el modal -->
+        <button class="btn btn-secondary" (click)="cancelarEliminar()">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,47 @@
+<!-- src/app/auth/auth.component.html -->
+<!-- Contenedor principal del login para estilos generales -->
+<div class="login-container">
+
+  <!-- Caja del formulario de login, centrada o con estilos propios -->
+  <div class="login-box">
+
+    <!-- Título del formulario -->
+    <h2>Iniciar sesión</h2>
+
+    <!-- Formulario de inicio de sesión -->
+    <!-- (ngSubmit)="login()" llama al método login() al hacer submit -->
+    <!-- #loginForm="ngForm" crea una referencia local para validar el formulario -->
+    <form (ngSubmit)="login()" #loginForm="ngForm">
+
+      <!-- Grupo de formulario para el correo -->
+      <div class="form-group">
+        <label for="correo">Correo</label>
+
+        <!-- Campo de entrada para el correo -->
+        <!-- [(ngModel)] enlaza bidireccionalmente con la propiedad "correo" del componente -->
+        <!-- required hace que sea obligatorio -->
+        <input type="email" id="correo" name="correo" [(ngModel)]="correo" required>
+      </div>
+
+      <!-- Grupo de formulario para la contraseña -->
+      <div class="form-group">
+        <label for="contrasena">Contraseña</label>
+
+        <!-- Campo de entrada para la contraseña -->
+        <!-- [(ngModel)] enlaza con la propiedad "contrasena" del componente -->
+        <!-- required obliga a escribir algo antes de enviar -->
+        <input type="password" id="contrasena" name="contrasena" [(ngModel)]="contrasena" required>
+      </div>
+
+      <!-- Botón de envío -->
+      <!-- El botón se desactiva si el formulario no es válido -->
+      <button type="submit" [disabled]="!loginForm.form.valid">Ingresar</button>
+    </form>
+
+    <!-- Mensaje de éxito, solo se muestra si successMessage tiene valor -->
+    <div class="message success" *ngIf="successMessage">{{ successMessage }}</div>
+
+    <!-- Mensaje de error, solo se muestra si errorMessage tiene valor -->
+    <div class="message error" *ngIf="errorMessage">{{ errorMessage }}</div>
+  </div>
+</div>

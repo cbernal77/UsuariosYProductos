@@ -1,0 +1,221 @@
+
+.page-container {
+  /* Fondo con degradado diagonal azul claro */
+  background: linear-gradient(135deg, #dbe9ff 0%, #a7c1f8 100%);
+  min-height: 100vh; /* Altura mínima: toda la pantalla */
+  padding: 2rem 1rem; /* Espaciado interno vertical y horizontal */
+  display: flex; /* Contenedor flexbox */
+  flex-direction: column; /* Dirección vertical de elementos */
+  align-items: center; /* Centra contenido horizontalmente */
+}
+
+.titulo {
+  text-align: center; /* Centra el texto */
+  margin-bottom: 25px; /* Margen inferior para separación */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipografía */
+  color: #2c3e50; /* Color azul oscuro */
+}
+
+.mensaje {
+  text-align: center; /* Texto centrado */
+  margin-bottom: 15px; /* Margen inferior */
+  font-weight: bold; /* Texto en negrita */
+  color: #27ae60; /* Color verde (para mensajes de éxito o info) */
+}
+
+.formulario-producto {
+  max-width: 600px; /* Ancho máximo del formulario */
+  margin: 0 auto 30px; /* Centrado horizontal y margen inferior */
+  padding: 20px; /* Relleno interno */
+  background: #f7f9fb; /* Fondo blanco grisáceo claro */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1); /* Sombra sutil */
+}
+
+.campo-form {
+  margin-bottom: 15px; /* Espaciado inferior entre campos */
+  display: flex; /* Flexbox */
+  flex-direction: column; /* Coloca label y input en columna */
+}
+
+.campo-form label {
+  margin-bottom: 5px; /* Separación debajo de etiqueta */
+  font-weight: 600; /* Texto semi-negrita */
+  color: #34495e; /* Color gris oscuro */
+}
+
+.campo-form input,
+.campo-form textarea {
+  padding: 8px 10px; /* Relleno interno de inputs y textarea */
+  font-size: 1rem; /* Tamaño de fuente */
+  border: 1.5px solid #bdc3c7; /* Borde gris claro */
+  border-radius: 6px; /* Bordes redondeados */
+  transition: border-color 0.3s ease; /* Transición suave para borde */
+}
+
+.campo-form input:focus,
+.campo-form textarea:focus {
+  outline: none; /* Quitar borde por defecto al enfocar */
+  border-color: #2980b9; /* Borde azul al enfocar */
+  background-color: #eaf4fd; /* Fondo azul claro al enfocar */
+}
+
+.botones-form {
+  display: flex; /* Flexbox para botones */
+  gap: 15px; /* Espacio entre botones */
+  justify-content: flex-end; /* Alinear a la derecha */
+}
+
+.btn-guardar,
+.btn-cancelar {
+  padding: 10px 20px; /* Tamaño de los botones */
+  border: none; /* Sin borde */
+  border-radius: 6px; /* Bordes redondeados */
+  font-weight: 700; /* Texto en negrita */
+  cursor: pointer; /* Cursor de mano para indicar clic */
+  transition: background-color 0.3s ease; /* Transición para cambio de color */
+}
+
+.btn-guardar {
+  background-color: #2980b9; /* Fondo azul */
+  color: white; /* Texto blanco */
+}
+
+.btn-guardar:hover {
+  background-color: #1c5980; /* Azul más oscuro al pasar el mouse */
+}
+
+.btn-cancelar {
+  background-color: #e74c3c; /* Fondo rojo */
+  color: white; /* Texto blanco */
+}
+
+.btn-cancelar:hover {
+  background-color: #b52e23; /* Rojo oscuro al hover */
+}
+
+.lista-productos {
+  max-width: 700px; /* Ancho máximo para la lista */
+  margin: 0 auto; /* Centrado horizontal */
+}
+
+.card-producto-admin {
+  background-color: #ffffff; /* Fondo blanco para cada tarjeta */
+  padding: 15px 20px; /* Relleno interno */
+  margin-bottom: 15px; /* Separación inferior entre tarjetas */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 1px 5px rgb(0 0 0 / 0.1); /* Sombra suave */
+  display: flex; /* Flexbox para distribuir contenido */
+  justify-content: space-between; /* Separar contenido al máximo */
+  align-items: center; /* Centrar verticalmente */
+  transition: box-shadow 0.3s ease; /* Transición para sombra */
+}
+
+.card-producto-admin:hover {
+  box-shadow: 0 4px 15px rgb(0 0 0 / 0.15); /* Sombra más marcada al pasar mouse */
+}
+
+.info-producto h3 {
+  margin: 0 0 6px; /* Margen inferior pequeño */
+  color: #2c3e50; /* Azul oscuro para títulos */
+}
+
+.info-producto p {
+  margin: 0 0 8px; /* Margen inferior */
+  color: #7f8c8d; /* Gris para descripción */
+}
+
+.acciones button {
+  margin-left: 10px; /* Separación entre botones */
+  padding: 6px 14px; /* Tamaño de los botones */
+  border-radius: 6px; /* Bordes redondeados */
+  font-size: 0.9rem; /* Tamaño de texto un poco más pequeño */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cursor de mano */
+  transition: background-color 0.25s ease; /* Transición color */
+  font-weight: 600; /* Texto semi-negrita */
+}
+
+.btn-editar {
+  background-color: #f39c12; /* Fondo naranja */
+  color: white; /* Texto blanco */
+}
+
+.btn-editar:hover {
+  background-color: #d68910; /* Naranja más oscuro al hover */
+}
+
+.btn-eliminar {
+  background-color: #e74c3c; /* Fondo rojo */
+  color: white; /* Texto blanco */
+}
+
+.btn-eliminar:hover {
+  background-color: #b52e23; /* Rojo oscuro al pasar mouse */
+}
+
+.modal-backdrop {
+  position: fixed; /* Fijo sobre la pantalla */
+  top: 0;
+  left: 0;
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Alto completo */
+  background-color: rgba(0, 0, 0, 0.4); /* Fondo negro semi-transparente */
+  display: flex; /* Flexbox para centrar modal */
+  align-items: center; /* Centrar vertical */
+  justify-content: center; /* Centrar horizontal */
+  z-index: 1000; /* Sobre otros elementos */
+}
+
+.modal {
+  background: white; /* Fondo blanco */
+  padding: 30px; /* Espacio interno */
+  border-radius: 10px; /* Bordes redondeados */
+  max-width: 400px; /* Ancho máximo */
+  width: 90%; /* Ancho adaptable */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Sombra para profundidad */
+  text-align: center; /* Texto centrado */
+}
+
+.modal-buttons {
+  margin-top: 20px; /* Espacio superior */
+  display: flex; /* Flexbox */
+  justify-content: center; /* Centrar botones */
+  gap: 20px; /* Separación entre botones */
+}
+
+.btn.btn-danger {
+  background-color: #dc3545; /* Botón rojo para eliminar */
+  color: white; /* Texto blanco */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer; /* Cursor pointer */
+}
+
+.btn.btn-secondary {
+  background-color: #6c757d; /* Botón gris para cancelar */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.volver-btn {
+  display: block;
+  margin: 0 auto 20px auto;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  width: fit-content;
+}
+
+.volver-btn:hover {
+  background-color: #5a6268;
+}

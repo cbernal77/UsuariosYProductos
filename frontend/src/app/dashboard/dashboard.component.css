@@ -1,0 +1,80 @@
+/*  :host es el selector que apunta al componente mismo, 
+  para aplicar estilos al contenedor raíz del componente.*/
+
+:host {
+  display: flex;               /* Usa Flexbox para layout */
+  justify-content: center;     /* Centra horizontalmente */
+  align-items: center;         /* Centra verticalmente */
+  min-height: 100vh;           /* Al menos la altura completa de la ventana */
+  padding: 2rem;               /* Espaciado interno alrededor */
+
+  /* Fondo con degradado angular */
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  
+  /* Fuente y color de texto */
+  font-family: 'Segoe UI', 'Inter', sans-serif;
+  color: #2c3e50;              /* Azul oscuro */
+}
+
+/* Contenedor principal dentro del dashboard */
+.container {
+  background-color: #a8c5f7;   /* Azul claro */
+  padding: 2.5rem;             /* Espacio interno */
+  border-radius: 16px;         /* Bordes redondeados */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06); /* Sombra suave */
+  max-width: 500px;            /* Máximo ancho */
+  width: 100%;                 /* Ocupa todo el ancho posible */
+  text-align: center;          /* Texto centrado */
+}
+
+/* Estilo para el título principal */
+h2 {
+  font-size: 1.8rem;           /* Tamaño de letra grande */
+  margin-bottom: 2rem;         /* Espacio debajo */
+  color: #1e3a8a;              /* Azul oscuro */
+}
+
+/* Estilo para todos los divs dentro (como contenedores de botones) */
+div {
+  display: flex;               /* Flexbox para layout */
+  flex-wrap: wrap;             /* Permite que los elementos bajen a la siguiente línea si no caben */
+  gap: 1rem;                   /* Espacio entre elementos */
+  justify-content: center;     /* Centra los elementos horizontalmente */
+  margin-bottom: 1.5rem;       /* Espacio debajo */
+}
+
+/* Estilo general para todos los botones */
+button {
+  background-color: #3b82f6;            /* Azul brillante */
+  color: white;                         /* Texto blanco */
+  border: none;                         /* Sin borde */
+  border-radius: 8px;                   /* Bordes redondeados */
+  padding: 0.75rem 1.25rem;             /* Espaciado interno */
+  font-size: 1rem;                      /* Tamaño estándar */
+  cursor: pointer;                     /* Cursor puntero al pasar encima */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transiciones suaves para transform y sombra */
+  min-width: 180px;                    /* Ancho mínimo para botones */
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2); /* Sombra azul suave */
+  display: inline-flex;                 /* Display inline-flex para centrar contenido interno */
+  align-items: center;                 /* Centra verticalmente el contenido */
+  justify-content: center;             /* Centra horizontalmente el contenido */
+}
+
+/* Efecto hover para botones: se eleva un poco y la sombra se intensifica */
+button:hover {
+  transform: translateY(-3px);         /* Sube 3px */
+  box-shadow: 0 6px 18px rgba(59, 130, 246, 0.3); /* Sombra más intensa */
+}
+
+/* Estilos específicos para el botón de cerrar sesión */
+.logout {
+  background-color: #ef4444;            /* Rojo fuerte */
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2); /* Sombra roja suave */
+  margin-top: 1rem;                    /* Margen superior para separarlo del resto */
+}
+
+/* Efecto hover para botón logout: cambia a rojo más oscuro y sombra más intensa */
+.logout:hover {
+  background-color: #dc2626;           /* Rojo oscuro */
+  box-shadow: 0 6px 18px rgba(220, 38, 38, 0.3); /* Sombra más intensa */
+}

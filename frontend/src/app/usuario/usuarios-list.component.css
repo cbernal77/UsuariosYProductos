@@ -1,0 +1,193 @@
+body {
+  font-family: 'Open Sans', sans-serif;  /* Fuente principal legible y moderna */
+  background-color: #f4f4f4;             /* Color de fondo claro */
+  margin: 0;                            /* Quita margen por defecto */
+  padding: 0;                           /* Quita padding por defecto */
+  color: #333;                         /* Color de texto principal */
+}
+
+.page-container {
+  background: linear-gradient(135deg, #dbe9ff 0%, #a7c1f8 100%); /* Degradado de azul */
+  min-height: 100vh;                   /* Altura mínima: 100% de la ventana */
+  padding: 2rem 1rem;                  /* Espaciado interior vertical y horizontal */
+  display: flex;                      /* Usar Flexbox para layout */
+  flex-direction: column;             /* Ordenar elementos en columna */
+  align-items: center;                /* Centrar horizontalmente */
+}
+
+h1 {
+  font-family: 'Nunito', sans-serif;  /* Fuente distinta para título principal */
+  text-align: center;                 /* Centrar texto */
+  color: #ff5722;                    /* Color naranja vibrante */
+  font-size: 48px;                   /* Tamaño grande de fuente */
+  margin-top: 40px;                  /* Margen superior para separar */
+}
+
+h2 {
+  font-family: 'Open Sans', sans-serif; /* Fuente para subtítulos */
+  text-align: center;                  /* Centrar texto */
+  font-size: 36px;                    /* Tamaño de fuente mediano */
+  color: #4CAF50;                    /* Color verde */
+  margin-bottom: 30px;               /* Margen inferior */
+}
+
+.table-title {
+  text-align: center;                /* Centrar texto */
+  font-size: 30px;                  /* Tamaño de fuente grande */
+  color: black;                    /* Color negro */
+  font-weight: 600;                /* Negrita */
+  margin-bottom: 25px;             /* Margen inferior */
+}
+
+.error {
+  color: #D32F2F;                  /* Color rojo para errores */
+  font-size: 16px;                 /* Tamaño de fuente */
+  text-align: center;              /* Centrar texto */
+  font-weight: 500;                /* Peso medio */
+  margin-bottom: 20px;             /* Margen inferior */
+}
+
+.table {
+  width: 85%;                     /* Ancho relativo a contenedor */
+  margin: 30px auto;              /* Margen arriba/abajo y centrado horizontal */
+  border-radius: 8px;             /* Bordes redondeados */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  overflow: hidden;              /* Ocultar contenido que desborde */
+  background-color: #d6e4ff;     /* Fondo azul claro */
+  border-collapse: collapse;     /* Eliminar espacio entre celdas */
+  transition: transform 0.2s ease-in-out; /* Animación suave para transformaciones */
+}
+
+.table:hover {
+  transform: translateY(-5px); /* Levanta la tabla 5px al pasar mouse */
+}
+
+.table th {
+  background-color: #00bcd4;    /* Fondo azul cyan */
+  color: white;                 /* Texto blanco */
+  padding: 16px;                /* Espaciado interno */
+  font-size: 18px;              /* Tamaño de fuente */
+  font-weight: 600;             /* Negrita */
+  text-align: center;           /* Centrar texto */
+  letter-spacing: 1px;          /* Espaciado entre letras */
+  text-transform: uppercase;   /* Texto en mayúsculas */
+}
+
+.table td {
+  padding: 16px;                /* Espaciado interno */
+  font-size: 16px;              /* Tamaño de fuente */
+  text-align: center;           /* Centrar texto */
+  color: #555;                  /* Color gris oscuro */
+  font-family: 'Roboto', sans-serif; /* Fuente secundaria */
+}
+
+.table tbody tr:hover {
+  background-color: #f1f1f1;    /* Cambia fondo al pasar mouse */
+  cursor: pointer;              /* Cambia cursor para indicar clickeable */
+}
+
+.btn {
+  background-color: #b3c9ff;    /* Fondo azul claro */
+  font-size: 14px;              /* Tamaño fuente */
+  padding: 10px 20px;           /* Espaciado interno vertical y horizontal */
+  border-radius: 20px;          /* Bordes redondeados */
+  border-style: none;           /* Sin borde */
+  font-weight: 600;             /* Negrita */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Animación suave */
+  text-align: center;           /* Centrar texto */
+  margin-right: 10px;           /* Margen derecho para separar botones */
+  cursor: pointer;              /* Cambia cursor para indicar clickeable */
+}
+
+.btn:hover {
+  transform: translateY(-2px); /* Levanta botón 2px al pasar mouse */
+}
+
+.btn-primary {
+  background-color: #00bcd4;    /* Fondo azul cyan */
+  color: white;                /* Texto blanco */
+}
+
+.btn-primary:hover {
+  background-color: #008c9e;    /* Fondo azul más oscuro al hover */
+}
+
+.btn-danger {
+  background-color: #ff5722;    /* Fondo naranja intenso */
+  color: white;                /* Texto blanco */
+}
+
+.btn-danger:hover {
+  background-color: #e64a19;    /* Fondo naranja más oscuro al hover */
+}
+
+.alert {
+  font-size: 18px;              /* Tamaño de fuente */
+  font-weight: 600;             /* Negrita */
+  background-color: #ffeb3b;   /* Fondo amarillo */
+  color: #4caf50;               /* Texto verde */
+  padding: 12px;                /* Espaciado interno */
+  border-radius: 5px;           /* Bordes redondeados */
+  text-align: center;           /* Centrar texto */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin: 10px 0;               /* Margen arriba y abajo */
+}
+
+.error {
+  font-size: 16px;              /* Tamaño fuente */
+  color: red;                   /* Color rojo */
+  text-align: center;           /* Centrar texto */
+}
+
+/* Modal Overlay */
+.modal-backdrop {
+  position: fixed;              /* Fijo a pantalla */
+  top: 0;                      /* En la parte superior */
+  left: 0;                     /* En la parte izquierda */
+  width: 100%;                 /* Ancho completo */
+  height: 100%;                /* Alto completo */
+  background-color: rgba(0,0,0,0.5); /* Fondo semitransparente negro */
+  display: flex;               /* Usar flexbox */
+  justify-content: center;     /* Centrar horizontalmente */
+  align-items: center;         /* Centrar verticalmente */
+  z-index: 1000;               /* Sobre otros elementos */
+}
+
+/* Modal Box */
+.modal {
+  background: white;           /* Fondo blanco */
+  padding: 25px 30px;          /* Espaciado interno */
+  border-radius: 8px;          /* Bordes redondeados */
+  width: 320px;                /* Ancho fijo */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Sombra suave */
+  text-align: center;          /* Centrar texto */
+}
+
+/* Botones dentro del modal */
+.modal-buttons {
+  margin-top: 20px;            /* Margen superior */
+  display: flex;              /* Flexbox para layout */
+  justify-content: space-between; /* Separar botones a los lados */
+}
+
+.modal-buttons .btn {
+  width: 48%;                  /* Cada botón ocupa casi la mitad */
+}
+
+.volver-btn {
+  display: block;
+  margin: 0 auto 20px auto;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  width: fit-content;
+}
+
+.volver-btn:hover {
+  background-color: #5a6268;
+}

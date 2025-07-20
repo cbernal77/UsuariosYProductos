@@ -1,0 +1,91 @@
+/* Contenedor principal centrado vertical y horizontalmente */
+.login-container {
+  display: flex; /* Usa Flexbox para el layout */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
+  height: 100vh;           /* Ocupa toda la altura de la ventana */
+  background: linear-gradient(to right, #00c6ff, #0072ff); /* Fondo con degradado azul */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente agradable y moderna */
+}
+
+/* Caja blanca del formulario */
+.login-box {
+  background-color: #ffffff;              /* Fondo blanco */
+  padding: 40px;                          /* Espaciado interno */
+  border-radius: 12px;                    /* Bordes redondeados */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+  width: 100%;                            /* Ocupa todo el ancho posible */
+  max-width: 400px;                       /* No pasa de 400px */
+  text-align: center;                     /* Centra el texto */
+}
+
+/* Estilo del título */
+.login-box h2 {
+  margin-bottom: 25px;  /* Espacio debajo del título */
+  color: #333;          /* Color gris oscuro para buen contraste */
+}
+
+/* Grupo de elementos del formulario (input + label) */
+.form-group {
+  margin-bottom: 20px; /* Espacio entre cada grupo */
+  text-align: left;    /* Alinea el texto a la izquierda */
+}
+
+/* Estilo para los labels */
+.form-group label {
+  display: block;        /* Ocupa todo el ancho */
+  margin-bottom: 8px;    /* Espacio entre label e input */
+  color: #333;           /* Gris oscuro */
+  font-weight: 500;      /* Semi-negrita */
+}
+
+/* Estilo para los inputs */
+.form-group input {
+  width: 100%;           /* Input ocupa todo el ancho disponible */
+  padding: 10px 12px;    /* Espaciado interno */
+  border: 1px solid #ccc;/* Borde gris claro */
+  border-radius: 6px;    /* Bordes redondeados */
+  font-size: 1em;        /* Tamaño estándar de texto */
+  transition: border-color 0.3s ease; /* Transición suave al enfocar */
+}
+
+/* Estilo cuando el input está enfocado */
+.form-group input:focus {
+  border-color: #007bff; /* Cambia el color del borde al azul */
+  outline: none;         /* Elimina el borde azul por defecto */
+}
+
+/* Estilo del botón de envío */
+button[type="submit"] {
+  width: 100%;                 /* Ocupa todo el ancho */
+  background-color: #007bff;   /* Azul Bootstrap */
+  color: #fff;                 /* Texto blanco */
+  padding: 12px;               /* Espaciado interno */
+  font-size: 1em;              /* Tamaño del texto */
+  border: none;                /* Sin borde por defecto */
+  border-radius: 6px;          /* Bordes redondeados */
+  cursor: pointer;             /* Muestra el puntero al pasar encima */
+  transition: background-color 0.3s ease; /* Transición suave al hacer hover */
+}
+
+/* Estilo del botón cuando se pasa el cursor encima */
+button[type="submit"]:hover {
+  background-color: #0056b3; /* Azul más oscuro al hacer hover */
+}
+
+/* Contenedor de los mensajes de éxito o error */
+.message {
+  margin-top: 20px;   /* Espacio arriba del mensaje */
+  font-weight: 500;   /* Semi-negrita */
+}
+
+/* Estilo para el mensaje de éxito */
+.success {
+  color: green; /* Texto verde */
+}
+
+/* Estilo para el mensaje de error */
+.error {
+  color: red;   /* Texto rojo */
+}
+

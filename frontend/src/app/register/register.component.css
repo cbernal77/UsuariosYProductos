@@ -1,0 +1,87 @@
+
+/* Título del formulario de registro */
+.register-title {
+  text-align: center;           /* Centra el texto */
+  font-size: 2rem;              /* Tamaño grande del título */
+  margin-bottom: 20px;         /* Espacio inferior */
+  color: #333;                 /* Color gris oscuro */
+}
+
+/* Contenedor principal del formulario */
+.register-form {
+  width: 100%;                  /* Ocupa todo el ancho disponible */
+  max-width: 500px;             /* Máximo ancho del formulario */
+  margin: 0 auto;               /* Centrado horizontal */
+  padding: 20px;                /* Espaciado interno */
+  background-color: #f9f9f9;    /* Color de fondo claro */
+  border-radius: 8px;           /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Separación entre los grupos de campos */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Estilo de las etiquetas */
+.form-label {
+  display: block;              /* Asegura que estén en su propia línea */
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 8px;          /* Espacio entre la etiqueta y el input */
+}
+
+/* Estilo base de los inputs y selects */
+.form-control {
+  width: 100%;                 /* Ocupa todo el ancho del contenedor */
+  padding: 10px;               /* Espaciado interno */
+  font-size: 1rem;
+  border: 1px solid #ccc;      /* Borde gris claro */
+  border-radius: 4px;
+  box-sizing: border-box;      /* Incluye padding y border en el ancho total */
+  transition: border 0.3s;     /* Animación de cambio de borde */
+}
+
+/* Estilo cuando el input está enfocado */
+.form-control:focus {
+  border-color: #007bff;       /* Cambia el borde a azul */
+  outline: none;               /* Elimina el contorno predeterminado del navegador */
+}
+
+/* Mensaje de error específico para campos */
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* Botón para enviar el formulario */
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;   /* Azul Bootstrap */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Cambio de color al pasar el mouse por encima del botón */
+.btn-submit:hover {
+  background-color: #0056b3;   /* Azul más oscuro */
+}
+
+/* Estado del botón cuando está deshabilitado */
+.btn-submit:disabled {
+  background-color: #ccc;      /* Gris claro */
+  cursor: not-allowed;         /* Cursor de bloqueo */
+}
+
+/* Mensaje de error general centrado */
+.error {
+  color: #d9534f;               /* Rojo tipo "danger" */
+  text-align: center;
+  margin-top: 20px;
+}

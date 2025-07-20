@@ -1,0 +1,31 @@
+<!-- src/app/producto/productos-cliente.component.html -->
+
+<div class="cliente-bg">
+  <!-- Título principal del catálogo -->
+  <h2 class="titulo">Catálogo de Productos</h2>
+<button (click)="accionTerminada()" class="volver-btn">Volver al dashboard</button>
+
+  <!-- Mensaje de error que aparece si 'mensaje' tiene contenido -->
+  <div *ngIf="mensaje" class="mensaje-error">{{ mensaje }}</div>
+
+  <!-- Grid para mostrar los productos -->
+  <div class="grid-productos">
+    <!-- Recorre el array productos y crea una tarjeta por cada producto -->
+    <div *ngFor="let producto of productos" class="card-producto">
+      <!-- Nombre del producto -->
+      <h3 class="nombre">{{ producto.nombre }}</h3>
+
+      <!-- Descripción del producto -->
+      <p class="descripcion">{{ producto.descripcion }}</p>
+
+      <!-- Detalles como precio y stock -->
+      <div class="detalles">
+        <!-- Precio con formato moneda USD y un icono -->
+        <span class="precio">💰 {{ producto.precio | currency:'USD' }}</span>
+
+        <!-- Cantidad en stock con icono -->
+        <span class="stock">📦 {{ producto.stock }} en stock</span>
+      </div>
+    </div>
+  </div>
+  </div>

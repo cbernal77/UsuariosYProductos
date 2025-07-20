@@ -1,0 +1,53 @@
+.welcome-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.welcome-box {
+  background-color: white;
+  padding: 40px 60px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;  /* Limitar el ancho para una mejor presentación */
+}
+
+.welcome-box h1 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #333;
+}
+
+.welcome-box p {
+  margin-bottom: 30px;
+  font-size: 1.1em;
+  color: #666;
+}
+
+.welcome-box button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 10px 5px;  /* Agregado para separarlos */
+  width: auto; /* Eliminar el 100% de ancho */
+  max-width: 200px; /* Limitar el ancho de los botones */
+  display: inline-block; /* Centrar los botones */
+  }
+
+.welcome-box button:hover {
+  background-color: #0056b3;
+}
+
+.welcome-box button.router-link {
+  width: auto;
+}
