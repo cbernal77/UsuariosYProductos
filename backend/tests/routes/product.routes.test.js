@@ -1,17 +1,17 @@
 const request = require('supertest');
 const express = require('express');
-const productRoutes = require('../../../routes/product.routes');
+const productRoutes = require('../../routes/product.routes');
 
-jest.mock('../../../middlewares/verifyToken', () => (req, res, next) => {
+jest.mock('../../middlewares/verifyToken', () => (req, res, next) => {
   req.user = { id: 'mockUserId', rol: 'admin' };
   next();
 });
-jest.mock('../../../middlewares/authRole', () => (role) => (req, res, next) => {
+jest.mock('../../middlewares/authRole', () => (role) => (req, res, next) => {
   next();
 });
 
 // Mock de modelo
-jest.mock('../../../models/product', () => ({
+jest.mock('../../models/product', () => ({
   find: jest.fn().mockResolvedValue([{ nombre: 'Producto 1' }]),
   findByIdAndUpdate: jest.fn().mockResolvedValue({ nombre: 'Actualizado' }),
   findByIdAndDelete: jest.fn().mockResolvedValue({ nombre: 'Eliminado' }),

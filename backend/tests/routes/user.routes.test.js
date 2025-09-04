@@ -21,18 +21,18 @@ const mockUserModel = {
   create: jest.fn(),
 };
 
-jest.mock('../../../models/user', () => mockUserModel);
+jest.mock('../../models/user', () => mockUserModel);
 
-jest.mock('../../../middlewares/verifyToken', () => (req, res, next) => {
+jest.mock('../../middlewares/verifyToken', () => (req, res, next) => {
   req.user = { id: 'mockUserId', rol: 'admin' };
   next();
 });
-jest.mock('../../../middlewares/authRole', () => (role) => (req, res, next) => {
+jest.mock('../../middlewares/authRole', () => (role) => (req, res, next) => {
   next();
 });
 
 // ✅ Luego la importación de userRoutes (¡IMPORTANTE!)
-const userRoutes = require('../../../routes/user.routes');
+const userRoutes = require('../../routes/user.routes');
 
 const app = express();
 app.use(express.json());
