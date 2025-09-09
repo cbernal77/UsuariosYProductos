@@ -1,6 +1,6 @@
 const request = require('supertest');
 const express = require('express');
-const productRoutes = require('../../routes/product.routes');
+//const productRoutes = require('../../routes/product.routes');
 
 jest.mock('../../middlewares/verifyToken', () => (req, res, next) => {
   req.user = { id: 'mockUserId', rol: 'admin' };
@@ -17,6 +17,8 @@ jest.mock('../../models/product', () => ({
   findByIdAndDelete: jest.fn().mockResolvedValue({ nombre: 'Eliminado' }),
   create: jest.fn(),
 }));
+
+const productRoutes = require('../../routes/product.routes');
 
 const app = express();
 app.use(express.json());
